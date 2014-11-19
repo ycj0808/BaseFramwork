@@ -9,7 +9,7 @@ import android.view.KeyEvent;
  * @author yangchj
  * @date 2014-11-14 下午2:39:24
  */
-public class BaseActivity extends ActionBarActivity {
+public abstract class BaseActivity extends ActionBarActivity {
 
 	private ActionBar actionBar;
 	
@@ -21,6 +21,9 @@ public class BaseActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		initActionBar();
+		initView();
+		initData();
+		setListener();
 	}
 	
 	/**
@@ -40,4 +43,10 @@ public class BaseActivity extends ActionBarActivity {
 		}
 		return super.onKeyDown(keyCode, event);
 	}
+	//初始化元素控件
+	protected abstract void initView();
+	//接收数据
+	protected abstract void initData();
+	//设置监听事件
+	protected abstract void setListener();
 }

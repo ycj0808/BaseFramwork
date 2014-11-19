@@ -15,5 +15,19 @@ public class MainActivity extends BaseActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.layout_activity_main);
 	}
-	
+
+	@Override
+	protected void initView() {
+		
+	}
+
+	@Override
+	protected void initData() {
+		
+	}
+
+	@Override
+	protected void setListener() {
+		
+	}
 }
